@@ -366,4 +366,16 @@ $(document).ready(function()
 		}
 	}
 
+	$(document).ready(function () {
+		$(".logout").click(function () {
+			$.ajax({
+				type: "POST",
+				url: "/Account/Logout",
+				success: function () {
+					window.location.reload();
+				}
+			})
+		})
+	})
+
 });
